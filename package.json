@@ -2,11 +2,11 @@
   "name": "node-test",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "type='module'",
   "scripts": {
-     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
-    
+      "dev": "webpack --mode development ./src/index.js --output ./dist/main.js --watch",
+   "build": "webpack --mode production ./src/index.js --output ./dist/main.js --watch"
+
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "@babel/cli": "^7.14.3",
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
   }
 }
